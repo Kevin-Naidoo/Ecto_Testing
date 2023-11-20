@@ -4,7 +4,7 @@ import Config
 config :ept, Ept.Repo,
   username: "postgres",
   password: "postgres",
-  hostname: "192localhost",
+  hostname: "192.168.1.222",
   database: "ept_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
