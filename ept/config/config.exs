@@ -10,6 +10,19 @@ import Config
 config :ept,
   ecto_repos: [Ept.Repo]
 
+
+
+
+  config :tracker, Ept.PromEx,
+  manual_metrics_start_delay: :no_delay,
+  drop_metrics_groups: [],
+  grafana: [
+    host: System.get_env("GRAFANA_HOST", "http://localhost:3000"),
+    auth_token: "glsa_bJ4mB8xA0b0xDxwDeHMnIq0CSQSTzxet_5b1056f1",
+    upload_dashboard_on_start: true,
+    folder_name: "ecto_dashboard",
+    annotate_app_lifecycle: true
+  ]
 # Configures the endpoint
 config :ept, EptWeb.Endpoint,
   url: [host: "localhost"],

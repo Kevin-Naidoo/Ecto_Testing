@@ -8,6 +8,8 @@ defmodule Ept.Application do
   @impl true
   def start(_type, _args) do
     children = [
+
+      Ept.PromEx,
       # Start the Telemetry supervisor
       EptWeb.Telemetry,
       # Start the Ecto repository
