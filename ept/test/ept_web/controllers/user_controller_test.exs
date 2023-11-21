@@ -8,13 +8,13 @@ defmodule EptWeb.UserControllerTest do
   @create_attrs %{
     email: "some email",
     isActive: true,
-    lastLoginDate: ~N[2023-11-20 08:30:00],
+    lastLoginDate: ~N[2023-11-20 12:48:00],
     password: "some password"
   }
   @update_attrs %{
     email: "some updated email",
     isActive: false,
-    lastLoginDate: ~N[2023-11-21 08:30:00],
+    lastLoginDate: ~N[2023-11-21 12:48:00],
     password: "some updated password"
   }
   @invalid_attrs %{email: nil, isActive: nil, lastLoginDate: nil, password: nil}
@@ -41,7 +41,7 @@ defmodule EptWeb.UserControllerTest do
                "id" => ^id,
                "email" => "some email",
                "isActive" => true,
-               "lastLoginDate" => "2023-11-20T08:30:00",
+               "lastLoginDate" => "2023-11-20T12:48:00",
                "password" => "some password"
              } = json_response(conn, 200)["data"]
     end
@@ -65,7 +65,7 @@ defmodule EptWeb.UserControllerTest do
                "id" => ^id,
                "email" => "some updated email",
                "isActive" => false,
-               "lastLoginDate" => "2023-11-21T08:30:00",
+               "lastLoginDate" => "2023-11-21T12:48:00",
                "password" => "some updated password"
              } = json_response(conn, 200)["data"]
     end
