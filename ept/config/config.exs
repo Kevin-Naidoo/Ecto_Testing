@@ -8,8 +8,8 @@ config :ept,
   manual_metrics_start_delay: :no_delay,
   drop_metrics_groups: [],
   grafana: [
-    host: System.get_env("GRAFANA_HOST", "http://localhost:3000"),
-    auth_token: "glsa_bJ4mB8xA0b0xDxwDeHMnIq0CSQSTzxet_5b1056f1",
+    host: System.get_env("GRAFANA_HOST", "http://192.168.1.222:3000"),
+    auth_token: "glsa_YsAbu3vg4T6l7sPgxuMFdH0GAK1IaRuv_74c429b2",
     upload_dashboard_on_start: true,
     folder_name: "ecto_dashboard",
     annotate_app_lifecycle: true
