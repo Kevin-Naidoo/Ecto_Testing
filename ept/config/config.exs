@@ -1,19 +1,10 @@
-# This file is responsible for configuring your application
-# and its dependencies with the aid of the Config module.
 #
-# This configuration file is loaded before any dependency and
-# is restricted to this project.
-
-# General application configuration
 import Config
 
 config :ept,
   ecto_repos: [Ept.Repo]
 
-
-
-
-  config :tracker, Ept.PromEx,
+  config :ept, Ept.PromEx,
   manual_metrics_start_delay: :no_delay,
   drop_metrics_groups: [],
   grafana: [
@@ -35,11 +26,7 @@ config :ept, EptWeb.Endpoint,
 
 # Configures the mailer
 #
-# By default it uses the "Local" adapter which stores the emails
-# locally. You can see the emails in your browser, at "/dev/mailbox".
-#
-# For production it's recommended to configure a different adapter
-# at the `config/runtime.exs`.
+
 config :ept, Ept.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)

@@ -39,6 +39,9 @@ defmodule EptWeb.Router do
 
       live_dashboard "/dashboard", metrics: EptWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
+
+
     end
+
   end
 end
